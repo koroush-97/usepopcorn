@@ -60,7 +60,9 @@ export default function App() {
         <NumResults movies={movies} />
       </NavBar>
       <Main>
-        <ListBox movies={movies} />
+        <ListBox>
+          <MovieList movies={movies} />
+        </ListBox>
         <WatchedBox />
       </Main>
     </>
@@ -122,7 +124,7 @@ function ListBox({ children }) {
         {isOpen1 ? "–" : "+"}
       </button>
 
-      {isOpen1 && { children }}
+      {isOpen1 && children}
     </div>
   );
 }
