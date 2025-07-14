@@ -14,6 +14,8 @@ export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
   size = 48,
+  className = "",
+  messages = [],
 }) {
   const [rating, setRating] = useState(0);
   const [tempRating, setTemprating] = useState(0);
@@ -29,7 +31,7 @@ export default function StarRating({
   };
 
   return (
-    <div style={containerStyle}>
+    <div style={containerStyle} className={className}>
       <div style={starContainerStyle}>
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
@@ -43,7 +45,11 @@ export default function StarRating({
           />
         ))}
       </div>
-      <p style={textStyle}>{tempRating || rating || " "}</p>
+      <p style={textStyle}>
+        {messages.length === maxRating
+          ? messages[rating - 1]
+          : tempRating || rating || " "}
+      </p>
     </div>
   );
 }
@@ -78,7 +84,7 @@ function Star({ onRate, full, onHoverin, onHoverOut, color, size }) {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="#000"
+          stroke={color}
         >
           <path
             strokeLinecap="round"
