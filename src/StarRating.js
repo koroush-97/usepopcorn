@@ -15,7 +15,7 @@ const textStyle = {
   margin: "0",
 };
 
-export default function StarRating({ maxRating = 5 }) {
+export default function StarRating({ maxRating = 5, color, size }) {
   const [rating, setRating] = useState(0);
   const [tempRating, setTemprating] = useState(0);
   function handleRating(rating) {
@@ -35,7 +35,7 @@ export default function StarRating({ maxRating = 5 }) {
           />
         ))}
       </div>
-      <p style={textStyle}>{tempRating || " "}</p>
+      <p style={textStyle}>{tempRating || rating || " "}</p>
     </div>
   );
 }
