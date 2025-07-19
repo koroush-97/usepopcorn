@@ -54,34 +54,18 @@ const KEY = "8a3bec74";
 const tempQuery = "interstellar";
 
 export default function App() {
-  const [query, setQuery] = useState(tempQuery);
+  const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState(tempWatchedData);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(function () {
-    console.log("after inital render");
-  }, []);
-  useEffect(function () {
-    console.log("after every endedr");
-  });
-
-  useEffect(
-    function () {
-      console.log("d");
-    },
-    [query]
-  );
-
-  console.log("During render");
-
-  useEffect(function () {
     async function fetchMovies() {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${KEY}&s=${tempQuery}`
         );
 
         if (!res.ok) {
