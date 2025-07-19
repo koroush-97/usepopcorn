@@ -62,8 +62,6 @@ export default function App() {
       .then((data) => {
         if (data.Response === "True") {
           setMovies(data.Search);
-        } else {
-          console.error("OMDB error:", data.Error);
         }
       });
   }, []);
