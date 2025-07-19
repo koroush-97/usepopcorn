@@ -61,13 +61,20 @@ export default function App() {
   const [error, setError] = useState("");
 
   useEffect(function () {
-    console.log("A");
+    console.log("after inital render");
   }, []);
   useEffect(function () {
-    console.log("B");
+    console.log("after every endedr");
   });
 
-  console.log("c");
+  useEffect(
+    function () {
+      console.log("d");
+    },
+    [query]
+  );
+
+  console.log("During render");
 
   useEffect(function () {
     async function fetchMovies() {
