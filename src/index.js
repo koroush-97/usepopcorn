@@ -22,7 +22,7 @@ root.render(
       maxRating={5}
       messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
     /> */}
-    <StarRating maxRating={5} color="red" defaultRating={3} />
-    <Test />
+    {/* <StarRating maxRating={5} color="red" defaultRating={3} />
+    <Test /> */}
   </React.StrictMode>
 );
