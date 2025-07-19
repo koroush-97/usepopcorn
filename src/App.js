@@ -51,23 +51,23 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 const KEY = "8a3bec74";
+const tempQuery = "interstellar";
 
 export default function App() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(tempQuery);
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState(tempWatchedData);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const tempQuery = "interstellar";
 
   useEffect(function () {
     console.log("A");
   }, []);
   useEffect(function () {
-    console.log("A");
+    console.log("B");
   });
 
-  console.log("A");
+  console.log("c");
 
   useEffect(function () {
     async function fetchMovies() {
