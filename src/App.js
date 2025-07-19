@@ -55,10 +55,10 @@ const KEY = "8a3bec74";
 export default function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState(tempWatchedData);
+  const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const tempQuery = "interstellar";
+  // const tempQuery = "interstellar";
   useEffect(
     function () {
       async function fetchMovies() {
