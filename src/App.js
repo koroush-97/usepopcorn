@@ -67,6 +67,7 @@ export default function App() {
       setMovies(data.Search);
     }
     fetchMovies();
+    setIsLoading(false);
   }, []);
   return (
     <>
@@ -75,9 +76,7 @@ export default function App() {
         <NumResults movies={movies} />
       </NavBar>
       <Main>
-        <Box>
-          <MovieList movies={movies} />
-        </Box>
+        <Box>{isLoading ? <Loader /> : <MovieList movies={movies} />}</Box>
 
         <Box>
           <WatchedSummary watched={watched} />
@@ -86,6 +85,10 @@ export default function App() {
       </Main>
     </>
   );
+}
+
+function Loader() {
+  return <p className="loader"> Loading... </p>;
 }
 
 function NavBar({ children }) {
