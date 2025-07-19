@@ -88,6 +88,11 @@ export default function App() {
         }
       }
 
+      if (query.length < 3) {
+        setMovies([]);
+        setError("");
+        return;
+      }
       fetchMovies();
     },
     [query]
