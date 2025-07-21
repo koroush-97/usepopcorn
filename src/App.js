@@ -82,7 +82,6 @@ export default function App() {
           }
 
           setMovies(data.Search);
-          console.log(data.Search);
         } catch (err) {
           console.error("Fetch error:", err.message);
           setError("Movie not found");
@@ -234,6 +233,10 @@ function Movie({ movie }) {
       </div>
     </li>
   );
+}
+
+function SelectedMovie({ selectedID }) {
+  return <div className="details">{selectedID}</div>;
 }
 
 function WatchedSummary({ watched }) {
