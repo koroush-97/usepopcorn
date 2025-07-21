@@ -58,6 +58,8 @@ export default function App() {
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [selectedID, setSelectedID] = useState(null);
+
   // const tempQuery = "interstellar";
   useEffect(
     function () {
@@ -90,7 +92,7 @@ export default function App() {
 
       if (query.length < 3) {
         setMovies([]);
-        setError("");
+        setError("movie not Found");
         return;
       }
       fetchMovies();
