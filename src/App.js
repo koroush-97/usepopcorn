@@ -260,6 +260,10 @@ function Movie({ movie, onSelectedMovie }) {
 }
 
 function MovieDetails({ selectedID, onCloseMovie }) {
+  useEffect(function () {
+    async function getMovieDetails() {}
+  }, []);
+
   return (
     <div className="details">
       <button className="btn-back" onClick={onCloseMovie}>
