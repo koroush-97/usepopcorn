@@ -63,7 +63,7 @@ export default function App() {
   // const tempQuery = "interstellar";
 
   function handleSelectMovie(id) {
-    setSelectedID(id);
+    setSelectedID((selectedID) => (id === selectedID ? null : id));
   }
 
   function handleCloseMovie() {
