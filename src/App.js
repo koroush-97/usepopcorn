@@ -322,6 +322,9 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           <em>{plot}</em>
         </p>
         <p>Starring {actors}</p>
+        <p>
+          Directed by <strong>{director}</strong>{" "}
+        </p>
       </section>
       {selectedID}
     </div>
