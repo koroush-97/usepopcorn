@@ -304,7 +304,11 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           {" "}
           &larr;{" "}
         </button>
-        <img src={poster} alt={`Poster of ${movie}`} />
+        <img src={poster} alt={`Poster of ${movie} movie`} />
+        <div className="details-overview">
+          <h2>{title}</h2>
+          <p></p>
+        </div>
       </header>
       {selectedID}
     </div>
