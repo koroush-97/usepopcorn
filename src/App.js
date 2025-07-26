@@ -58,7 +58,7 @@ export default function App() {
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [selectedID, setSelectedID] = useState("tt0080684");
+  const [selectedID, setSelectedID] = useState(null);
 
   // const tempQuery = "interstellar";
 
