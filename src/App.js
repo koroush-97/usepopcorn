@@ -268,7 +268,11 @@ function Movie({ movie, onSelectedMovie }) {
 
 function MovieDetails({ selectedID, onCloseMovie }) {
   useEffect(function () {
-    async function getMovieDetails() {}
+    async function getMovieDetails() {
+      const res = await fetch(
+        `https://www.omdbapi.com/?apikey=${KEY}&s=${selectedID}`
+      );
+    }
   }, []);
 
   return (
