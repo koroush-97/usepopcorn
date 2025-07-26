@@ -310,6 +310,11 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           <p>
             {realeased} &bull; {runtine}
           </p>
+          <p>{genre}</p>
+          <p>
+            <span>⭐</span>
+            {imdbRating}
+          </p>
         </div>
       </header>
       {selectedID}
