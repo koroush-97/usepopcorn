@@ -326,7 +326,6 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           Directed by <strong>{director}</strong>{" "}
         </p>
       </section>
-      {selectedID}
     </div>
   );
 }
