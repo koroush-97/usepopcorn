@@ -115,6 +115,7 @@ export default function App() {
         <Search query={query} setQuery={setQuery} />
         <NumResults movies={movies} />
       </NavBar>
+
       <Main>
         <Box>
           {isLoading && <Loader />}
@@ -131,10 +132,16 @@ export default function App() {
               onCloseMovie={handleCloseMovie}
             />
           ) : (
-            <>
-              <WatchedSummary watched={watched} />
-              <WatchedMovieList watched={watched} />
-            </>
+            <Box>
+              {selectedID ? (
+                <MovieDetails selectedID={selectedID} />
+              ) : (
+                <>
+                  <WatchedSummary watched={watched} />
+                  <WatchedMovieList watched={watched} />
+                </>
+              )}
+            </Box>
           )}
         </Box>
       </Main>
@@ -276,7 +283,7 @@ function MovieDetails({ selectedID, onCloseMovie }) {
 }
 
 function SelectedMovie({ selectedID }) {
-  return <div className="details"></div>;
+  return <div className="details">{selectedID}</div>;
 }
 
 function WatchedSummary({ watched }) {
