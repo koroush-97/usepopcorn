@@ -313,7 +313,7 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           <p>{genre}</p>
           <p>
             <span>⭐</span>
-            {imdbRating}
+            {imdbRating} IMDb Rating
           </p>
         </div>
       </header>
