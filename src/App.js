@@ -269,6 +269,7 @@ function Movie({ movie, onSelectedMovie }) {
 
 function MovieDetails({ selectedID, onCloseMovie }) {
   const [movie, setMovie] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     Title: title,
