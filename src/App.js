@@ -135,6 +135,7 @@ export default function App() {
             <MovieDetails
               selectedID={selectedID}
               onCloseMovie={handleCloseMovie}
+              onAddWatched={handleAddWatched}
             />
           ) : (
             <Box>
@@ -271,7 +272,7 @@ function Movie({ movie, onSelectedMovie }) {
   );
 }
 
-function MovieDetails({ selectedID, onCloseMovie }) {
+function MovieDetails({ selectedID, onCloseMovie , onAddWatched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -288,7 +289,17 @@ function MovieDetails({ selectedID, onCloseMovie }) {
     Genre: genre,
   } = movie;
 
-  console.log(title, year);
+  function handleAdd() {
+      const newWatchedMovie = {
+        imdbRating: selectedID,
+        title,
+        year,
+        poster,
+        imdbRating: Number
+      }
+      onAddWatched(newWatchedMovie)
+  }
+
 
   useEffect(
     function () {
@@ -335,6 +346,7 @@ function MovieDetails({ selectedID, onCloseMovie }) {
           <section>
             <div className="rating">
               <StarRating maxRating={10} size={24} />
+              <button className="btn-add" onClick={}> + add to List </button>
             </div>
             <p>
               <em>{plot}</em>
