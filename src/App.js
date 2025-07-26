@@ -267,12 +267,17 @@ function Movie({ movie, onSelectedMovie }) {
 }
 
 function MovieDetails({ selectedID, onCloseMovie }) {
+  const [movie, setMovie] = useState({});
   useEffect(function () {
     async function getMovieDetails() {
       const res = await fetch(
         `https://www.omdbapi.com/?apikey=${KEY}&s=${selectedID}`
       );
+
+      const data = await res.json();
+      setMovie(data);
     }
+    getMovieDetails();
   }, []);
 
   return (
