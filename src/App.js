@@ -282,6 +282,8 @@ function MovieDetails({ selectedID, onCloseMovie }) {
     Genre: genre,
   } = movie;
 
+  console.log(title, year);
+
   useEffect(function () {
     async function getMovieDetails() {
       const res = await fetch(
@@ -297,10 +299,13 @@ function MovieDetails({ selectedID, onCloseMovie }) {
 
   return (
     <div className="details">
-      <button className="btn-back" onClick={onCloseMovie}>
-        {" "}
-        &larr;{" "}
-      </button>
+      <header>
+        <button className="btn-back" onClick={onCloseMovie}>
+          {" "}
+          &larr;{" "}
+        </button>
+        <img src={poster} alt={`Poster of ${movie}`} />
+      </header>
       {selectedID}
     </div>
   );
