@@ -115,6 +115,9 @@ export default function App() {
         setError("movie not Found");
         return;
       }
+
+      handleCloseMovie();
+
       fetchMovies();
       return function () {
         controller.abort();
