@@ -13,6 +13,10 @@ export default function App() {
   const [error, setError] = useState("");
   const [selectedID, setSelectedID] = useState(null);
   // const [watched, setWatched] = useState([]);
+  const [watched, setWatched] = useState(function () {
+    const storedValue = localStorage.getItem("watched");
+    return storedValue;
+  });
 
   // const tempQuery = "interstellar";
 
