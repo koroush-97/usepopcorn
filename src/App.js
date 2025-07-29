@@ -179,6 +179,10 @@ function Search({ query, setQuery }) {
   const inputEl = useRef(null);
 
   useEffect(function () {
+    function callback() {}
+
+    document.addEventListener("keydown", callback);
+
     inputEl.current.focus();
   }, []);
 
