@@ -30,4 +30,8 @@ const sidemovieArticels = [
     name: "Shutter",
     art: "A man comes to the chilling realization that he is not alone when he finds odd images of himself taken from inside his home. ",
   },
+  {
+    name: "Spider-Man: No Way Home",
+    art: "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong ",
+  },
 ];
