@@ -26,4 +26,8 @@ const sidemovieArticels = [
     name: "Shutter Bugged Cat",
     art: "Tom watches and studies films of some of his earlier encounters with Jerry, much like game films; he runs them backwards and stops them so he can study them more closely, all the while scribbling notes. Jerry pulls up a box of pop... ",
   },
+  {
+    name: "Shutter",
+    art: "A man comes to the chilling realization that he is not alone when he finds odd images of himself taken from inside his home. ",
+  },
 ];
