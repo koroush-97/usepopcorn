@@ -22,4 +22,8 @@ const sidemovieArticels = [
     name: "Shutter Island",
     art: " Two US marshals are sent to a mental institution on an inhospitable island in order to investigate the disappearance of a patient. ",
   },
+  {
+    name: "Shutter Bugged Cat",
+    art: "Tom watches and studies films of some of his earlier encounters with Jerry, much like game films; he runs them backwards and stops them so he can study them more closely, all the while scribbling notes. Jerry pulls up a box of pop... ",
+  },
 ];
