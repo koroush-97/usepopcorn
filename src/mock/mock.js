@@ -13,4 +13,9 @@ const MoveName = [
   },
 ];
 
-const sidemovieArticels = [];
+const sidemovieArticels = [
+  {
+    name: "shutter",
+    art: "A newly married couple discovers disturbing, ghostly images in photographs they develop after a tragic accident. Fearing the manifestations may be connected, they investigate and learn that some mysteries are better left unsolved.",
+  },
+];
