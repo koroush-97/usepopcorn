@@ -12,3 +12,5 @@ const MoveName = [
     min: "130min",
   },
 ];
+
+const sidemovieArticels = [];
