@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+const KEY = "8a3bec74";
+
 export function useMovie(query) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -42,7 +44,7 @@ export function useMovie(query) {
         return;
       }
 
-      handleCloseMovie();
+      //   handleCloseMovie();
 
       fetchMovies();
       return function () {
