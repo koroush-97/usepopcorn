@@ -10,7 +10,7 @@ export default function App() {
   const [selectedID, setSelectedID] = useState(null);
   // const [watched, setWatched] = useState([]);
 
-  useMovie(query);
+  const { movies, error, isLoading } = useMovie(query);
 
   const [watched, setWatched] = useState(function () {
     const storedValue = localStorage.getItem("watched");
