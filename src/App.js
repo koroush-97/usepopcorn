@@ -17,11 +17,6 @@ export default function App() {
 
   const [watched, setWatched] = useLocalstorageState([]);
 
-  // const [watched, setWatched] = useState(function () {
-  //   const storedValue = localStorage.getItem("watched");
-  //   return JSON.parse(storedValue);
-  // });
-
   // const tempQuery = "interstellar";
 
   function handleSelectMovie(id) {
@@ -41,13 +36,6 @@ export default function App() {
   function handleDeleteWatch(id) {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
-
-  useEffect(
-    function () {
-      localStorage.setItem("watched", JSON.stringify(watched));
-    },
-    [watched]
-  );
 
   return (
     <>
