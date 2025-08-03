@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const KEY = "8a3bec74";
 
-export function useMovie(query) {
+export function useMovie(query, callback) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
