@@ -269,7 +269,7 @@ function MovieDetails({ selectedID, onCloseMovie, onAddWatched, watched }) {
     onCloseMovie();
   }
 
-  useKey();
+  useKey("Escape", onCloseMovie);
 
   useEffect(
     function () {
