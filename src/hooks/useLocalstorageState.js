@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-export function useLocalstorageState(initialState) {
+export function useLocalstorageState(initialState, key) {
   const [value, setValue] = useState(function () {
-    const storedValue = localStorage.getItem("watched");
+    const storedValue = localStorage.getItem(key);
     return JSON.parse(storedValue);
   });
 
@@ -10,6 +10,8 @@ export function useLocalstorageState(initialState) {
     function () {
       localStorage.setItem("watched", JSON.stringify(value));
     },
-    [value]
+    [value, key]
   );
+
+  return [value, setValue];
 }
